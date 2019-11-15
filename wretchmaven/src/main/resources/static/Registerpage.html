@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wretch Sign In</title>
+    
+   
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="bootstrap/bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/jquery/jquery.min.js"></script>
+    <script src="bootstrap/jquery/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/jquery-easing/jquery.easing.min.js"></script>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+    
+            <a class="navbar-brand js-scroll-trigger" href="Front-page.html">Wretch</a>        
+        </div>   
+    </nav>
+    <div class="container register">
+                    <div class="row">
+                        <div class="col-md-3 register-left">
+                            <input type="submit" onclick="location.href='Loginpage.html'" value="Login"/><br/>
+                        </div>
+                        
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row register-form">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="First Name *" value="" id="firstName"/>
+                                            </div>
+                                            
+                                            <div class="alert alert-danger" role="alert" id="alertfirstname" style="display:none;">
+                                                <strong>Enter a valid first name!</strong>
+                                                
+                                              </div>                                              
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Last Name *" value="" id="lastName"/>
+                                            </div>
+                                            <div class="alert alert-danger" role="alert" id="alertlastname" style="display:none;">
+                                                <strong>Enter a valid last name!</strong>
+                                                
+                                              </div>  
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Password *" value="" id="password"/>
+                                            </div>
+
+                                            <div class="alert alert-danger" role="alert" id="alertpassword" style="display:none;">
+                                                <strong>Enter a valid password!</strong>
+                                                
+                                              </div>   
+                                            <div class="form-group">
+                                                <input type="password" class="form-control"  placeholder="Confirm Password *" value="" id="confirmPassword"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option class="hidden" selected disabled>Please select your Gender</option>
+                                                    <option value="male">male</option>
+                                                    <option value="female">female</option>
+                                                    <option value="ohter">other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                                    <option>What is your Birthdate?</option>
+                                                    <option>What is Your old Phone Number</option>
+                                                    <option>What is your Pet Name?</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                            </div>
+                                            <input type="submit" class="btnRegister" value="Register" id="RegistryButton"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <footer class="footer footer-expand-lg fixed-bottom bg-light">
+                            <div class="container">
+                              <div class="row align-items-center">
+                                <div class="col-md-4">
+                                  <span class="copyright">Copyright &copy; Wretch 2019</span>
+                                </div>
+                                <div class="col-md-4">
+                                  <ul class="list-inline social-buttons">
+                                    <li class="list-inline-item">
+                                      <a href="https://twitter.com/Wretch84658255" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                      </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="#" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                      </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="#" target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-4">
+                                  <ul class="list-inline quicklinks">
+                                    <li class="list-inline-item">
+                                      <a href="privat.html" style="color: red;">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="tou.html" style="color: red;">Terms of Use</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </footer>
+    
+                </div> 
+                <script src="js/registry-validation.js"></script>  
+
+                      
+</body>
+
+</html>
