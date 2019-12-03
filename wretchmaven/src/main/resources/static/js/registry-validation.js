@@ -1,6 +1,11 @@
 const RegVal = {
 
             
+	verifyUserName: function() {
+		// hier prüfung, ob username bereits in Datenbank vorhanden
+		//wenn ja: return false, wenn nein: return true
+		
+	},
 
     verifyFirstName : function() {
 
@@ -8,11 +13,6 @@ const RegVal = {
 
            const firstName = firstNameField.value;
 
-           console.log(firstName);
-
-           console.log(firstName.length);
-
-          
 
            if(firstName.length <1){
 
@@ -78,9 +78,17 @@ const RegVal = {
 
 
 
+    },
+    
+    verifyPhoneNumber: function() {
+    	
+    	const passwordField = document.getElementById('phoneNumber');
+    	
+    	const password = passwordField.value;
+    	
     }
 
-   
+
 
 }
 
@@ -89,41 +97,52 @@ const RegVal = {
 var regButton = document.getElementById('RegistryButton');
 
 regButton.addEventListener("click", function(){
+	
+if (RegVal.verifyUserName()) {
+	//wenn wahr -> fehlermeldung unsichtbar machen
+}
+else{
+	//wenn falsch -> fehlermeldung sichtbar machen
+}
 
-if (!RegVal.verifyFirstName()){
+if (RegVal.verifyFirstName()){
 
-    const firstNameField = document.getElementById('firstName');
+	var alertfirstname =  document.getElementById("alertfirstname");
+    alertfirstname.style.display = "none";
 
     
-
-    var alertfirstname =  document.getElementById("alertfirstname");
-       alertfirstname.style.display = "block";
 }
 else {
-       var alertfirstname =  document.getElementById("alertfirstname");
-       alertfirstname.style.display = "none";
+       
+	var alertfirstname =  document.getElementById("alertfirstname");
+    alertfirstname.style.display = "block";
 }
 
-if (!RegVal.verifyLastName()){
+if (RegVal.verifyLastName()){
 
-       var alertfirstname =  document.getElementById("alertlastname");
-       alertfirstname.style.display = "block";
-
-}
-else {
-       var alertfirstname =  document.getElementById("alertlastname");
-       alertfirstname.style.display = "none";
-}
-
-if (!RegVal.verifyPassword()){
-
-       var alertfirstname =  document.getElementById("alertpassword");
-       alertfirstname.style.display = "block";
+	var alertfirstname =  document.getElementById("alertlastname");
+    alertfirstname.style.display = "none";
+       
 
 }
 else {
+	var alertfirstname =  document.getElementById("alertlastname");
+    alertfirstname.style.display = "block";
+}
+
+if (RegVal.verifyPassword()){
+
+       
+
        var alertfirstname =  document.getElementById("alertpasswordname");
        alertfirstname.style.display = "none";
 }
+else {
+       
+	var alertfirstname =  document.getElementById("alertpassword");
+    alertfirstname.style.display = "block";
+}
+
+
 
 });
