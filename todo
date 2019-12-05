@@ -1,0 +1,16 @@
+To-do:
+-username zu registration hinzufügen
+-Fehler bei registration wenn Feld leer
+-log-in-> nur username, nicht email!
+-scoreboard
+-power point
+
+-scoreboard anbinden und mit Testdaten laufen lassen
+-log-in anbinden
+-register anbinden
+-Generell Datanbindung 
+-Trading page
+    Button "Start to exchange"-> Zentrale Adresse zum Verschicken anzeigen
+    -> Button "Parcel sent"
+      -> Button "Rate your gifter/secret santa"
+        -> Button "Start to exchange"
