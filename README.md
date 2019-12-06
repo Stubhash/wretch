@@ -5,17 +5,19 @@ This web-application is used to have an online version of secret santa. It inclu
 The web-application uses the following technology stack:
 
     HTML, CSS, Javascript
-    Frameworks (client-side): Bootstrap
-    Java Servlet
+    Frameworks: 
+    Bootstrap
+    jQuery
     Tomcat webserver
     MySQL Database
+    Spring Boot
 
 Preconditions and Installation
 
 The following preconditions are required to run this application:
 
     Tomcat running
-    MySQL server running on localhost port 3306 with username root, password start123
+    MySQL server running on localhost port 8081 with username: root, password: password
 
 Installation steps:
 
