@@ -18,7 +18,7 @@ Preconditions and Installation
 The following preconditions are required to run this application:
 
     Tomcat running
-    MySQL server running on localhost port 8081 with username: root, password: password
+    MySQL server running on localhost port 3306 with username: root, password: password
 
 Installation steps:
 
