@@ -5,7 +5,7 @@ const RegVal = {
 	verifyUserName : function() {
 		// hier prüfung, ob username bereits in Datenbank vorhanden
 		// wenn ja: return false, wenn nein: return true
-		const usernameField = document.getElementById('usernameField');
+		const usernameField = document.getElementById('username');
 
 		const username = usernameField.value;
 
@@ -97,11 +97,11 @@ const RegVal = {
 
 	verifyEMail : function() {
 
-		const EMailField = document.getElementById('EMail');
+		const EMailField = document.getElementById('email');
 
 		const EMail = EMailField.value;
 
-		if (EMail.includes('@') && EMail.includes('@')) {
+		if (EMail.includes('@') && EMail.includes('.')) {
 			return true;
 		} else {
 			return false;
@@ -162,17 +162,7 @@ regButton.addEventListener("click", function() {
 	finalcheck = true;
 
 	// test username
-	if (RegVal.verifyUserName()) {
-
-		var alertusername = document.getElementById("alertusername");
-		alertusername.style.display = "none";
-
-	} else {
-
-		var alertusername = document.getElementById("alertusername");
-		alertusername.style.display = "block";
-		finalcheck = false;
-	}
+	
 
 	// test first name
 	if (RegVal.verifyFirstName()) {
@@ -184,6 +174,17 @@ regButton.addEventListener("click", function() {
 
 		var alertfirstname = document.getElementById("alertfirstname");
 		alertfirstname.style.display = "block";
+		finalcheck = false;
+	}
+	if (RegVal.verifyUserName()) {
+
+		var alertusername = document.getElementById("alertusername");
+		alertusername.style.display = "none";
+
+	} else {
+
+		var alertusername = document.getElementById("alertusername");
+		alertusername.style.display = "block";
 		finalcheck = false;
 	}
 
@@ -227,7 +228,7 @@ regButton.addEventListener("click", function() {
 	// test EMail
 	if (RegVal.verifyEMail()) {
 
-		var alertemail = document.getElementById("alteremail");
+		var alertemail = document.getElementById("alertemail");
 		alertemail.style.display = "none";
 
 	} else {
