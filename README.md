@@ -11,6 +11,7 @@ The web-application uses the following technology stack:
     Tomcat webserver
     MySQL Database
     Spring Boot
+    Maven
 
 Preconditions and Installation
 
