@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <head>
 
@@ -20,7 +20,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 
-  <link href="css/agency.css" rel="stylesheet">
+  <link href="css/agency.css" rel="stylesheet" th:href="@{/css/main.css}">
 
 </head>
 
@@ -55,7 +55,7 @@
             <a class="nav-link js-scroll-trigger" href="Profile.html" id="name">Name</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html" >Logout 🎅</a>
+              <a class="nav-link js-scroll-trigger" th:href="@{/index}" href="index.html"  th:substituteby="index::logout">Logout 🎅</a>
             </li>
         </ul>
       </div>
