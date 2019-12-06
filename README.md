@@ -4,7 +4,7 @@ This web-application is used to have an online version of secret santa. It inclu
 
 The web-application uses the following technology stack:
 
-    HTML, CSS, Javascript
+    HTML, CSS, Javascript, Java, SQL
     Frameworks: 
     Bootstrap
     jQuery
