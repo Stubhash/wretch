@@ -10,10 +10,10 @@
 
   <title>Wretch</title>
 
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css	" rel="stylesheet">
 
 
-  <link href="bootstrap/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> <!-- muss noch url eingebundne werden -->
+  <link href="bootstrap/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -38,7 +38,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#howitworks">How it works</a>
           </li>
-          
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#exchange">Exchange</a>
+            </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#Scoreboard">Scoreboard</a>
           </li>
@@ -48,27 +50,25 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
+          
           <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="Loginpage.html" >Login 🎅</a>
-              
-            
-            
+            <a class="nav-link js-scroll-trigger" href="Profile.html" id="name">Name</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="Registerpage.html" >Register</a>
-          </li>
+              <a class="nav-link js-scroll-trigger" href="index.html" >Logout 🎅</a>
+            </li>
         </ul>
       </div>
     </div>
   </nav>
 
- 
+
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To Wretch!</div>
         <div class="intro-heading text-uppercase">The best site to exchange your Stuff</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#howitworks">Tell Me More</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#exchange">Start to Exchange</a>
       </div>
     </div>
   </header>
@@ -111,7 +111,7 @@
           <h4 class="howitworks-heading">Rules</h4>
           <p class="text-muted">Rules are boring and we want to keep it simple. But please care about the following things:
               -	Stay anonymous! Revealing each other’s identity is lame
-              -	The gift value should be at least around 15€ to ensure the chance to get cool stuff. On the other hand, you may send more valuable stuff to surprise the other one.
+              -	The gift value should be at least around *insert value*€ to ensure the chance to get cool stuff. On the other hand, you may send more valuable stuff to surprise the other one.
               </p>
         </div>
       </div>
@@ -119,18 +119,29 @@
     </div>
   </section>
 
+  <section class="bg-secondary page-section" id="exchange">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center text-white">
+            <h2 class="section-heading text-uppercase">Exchange</h2>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="Profile.html">Start to Exchange</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
 
   <section class="bg-dark page-section" id="Scoreboard">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center text-white">
           <h2 class="section-heading text-uppercase">Scoreboard</h2>
-          <div class="container">
-         <div class="row">
-           <div class="col">Rank</div>
-           <div class="col">Nickname</div>
-           <div class="col">Score</div>
-         </div>
+          <div class="flex-container">
+         <table style="border-collapse: separate; border-spacing: 50px 10px; ">
+          <thead>
+           <tr><th>Rank</th> <th>Nickname</th><th>Score</th></tr>
+          </thead>
+         </table>
         </div>
         </div>
       </div>
@@ -140,7 +151,7 @@
 
 
 
-  <section class="bg- page-section" id="team">
+  <section class="bg-light page-section" id="team">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -299,10 +310,10 @@
   <footer class="footer bg-light">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-4">
+        <div class="col">
           <span class="copyright">Copyright &copy; Wretch 2019</span>
         </div>
-        <div class="col-md-4">
+        <div class="col">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="https://twitter.com/Wretch84658255" target="_blank">
@@ -321,7 +332,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col">
           <ul class="list-inline quicklinks">
             <li class="list-inline-item">
               <a href="privat.html">Privacy Policy</a>
@@ -336,14 +347,15 @@
   </footer>
 
 
-  <!-- alt: script src="bootstrap/jquery/jquery.min.js"></script-->
+  <!-- alt: script src="bootstrap/jquery/jquery.min.js"></script -->
   <!-- alt: script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script-->
-  <!-- alt:script src="bootstrap/jquery-easing/jquery.easing.min.js"></script-->
+  <!-- alt: script src="bootstrap/jquery-easing/jquery.easing.min.js"></script-->
+  
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  
+
   <script src="js/agency.min.js"></script>
 
 </body>

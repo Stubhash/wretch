@@ -9,12 +9,13 @@ create table customer_information(
     zip char(5),
     city char(40),
     score char(5)
-)
+);
 
---test entries
-
-INSERT INTO   customer_information (
-    'schnickschnack',
+INSERT INTO customer_information( 
+    username, firstname, lastname, email, phonenr, street, housingnr,
+    zip, city, score )  
+	
+    VALUES ('schnickschnack',
     'Jürgen',
     'Müller',
     'musteremail@hotmail.com',
@@ -26,6 +27,9 @@ INSERT INTO   customer_information (
     '12345');
 
     INSERT INTO   customer_information (
+        username, firstname, lastname, email, phonenr, street, housingnr,
+    zip, city, score ) 
+    VALUES (
     'ichmageiscreme',
     'Justus',
     'Meier',
@@ -38,6 +42,9 @@ INSERT INTO   customer_information (
     '123124');
 
     INSERT INTO   customer_information (
+            username, firstname, lastname, email, phonenr, street, housingnr,
+    zip, city, score ) 
+    VALUES (
     'andreahasi',
     'Andrea',
     'Schulz',
@@ -50,6 +57,9 @@ INSERT INTO   customer_information (
     '124');
 
     INSERT INTO   customer_information (
+            username, firstname, lastname, email, phonenr, street, housingnr,
+    zip, city, score ) 
+    VALUES (
     'owouwu',
     'Maximilian',
     'Müller',
@@ -62,6 +72,9 @@ INSERT INTO   customer_information (
     '1');
 
     INSERT INTO   customer_information (
+            username, firstname, lastname, email, phonenr, street, housingnr,
+    zip, city, score ) 
+    VALUES (
     'Pewdiepie',
     'Felix',
     'Eisberg',
