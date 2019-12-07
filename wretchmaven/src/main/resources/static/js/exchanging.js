@@ -21,7 +21,7 @@ function modify_exchange_button()
 		p1.appendChild(document.createTextNode("Central address"));
 		p2.appendChild(document.createTextNode("Max Mustermann"));
 		p3.appendChild(document.createTextNode("Musterstrasse 42"));
-		p4.appendChild(document.createTextNode("Musterstadt"));
+		p4.appendChild(document.createTextNode("42422 Musterstadt"));
 		document.getElementById("address_text").appendChild(p1);
 		document.getElementById("address_text").appendChild(p2);
 		document.getElementById("address_text").appendChild(p3);
@@ -44,7 +44,7 @@ function modify_exchange_button()
 			var p1 = document.createElement("P");
 			var p2 = document.createElement("P");
 			p1.appendChild(document.createTextNode("Wrate your wretched gift from 1-5!"));
-			p2.appendChild(document.createTextNode("If you don't click a santa clause your Wretcher won't be rated!"));
+			p2.appendChild(document.createTextNode("If you don't click a santa claus your Wretcher won't be rated!"));
 			document.getElementById("not_rated_warning").appendChild(p1);
 			document.getElementById("not_rated_warning").appendChild(p2);
 
