@@ -1,27 +1,12 @@
 package com.wretch.wretchmaven.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-@Table(name ="Customers")
-public class Customers {
-	public Customers() {
-		
-	}
-	public Customers(Customers customers) {
-		this.active = customers.getActive();
-		this.email = customers.getEmail();
-		this.username = customers.getUsername();
-		this.gender = customers.getGender();
-		this.name = customers.getName();
-		this.lastname = customers.getLastname();
-		this.password = customers.getPassword();
-	}
+@Table(name = "user")
+public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "username")
@@ -38,7 +23,19 @@ public class Customers {
 	private String gender;
 	@Column(name = "active")
 	private int active;
+	@Column(name = "roles")
+	 @ManyToMany
+	    private Set<Role> roles;
+	 @Transient
+	    private String passwordConfirm;
+
 	
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -82,5 +79,11 @@ public class Customers {
 	public void setActive(int active) {
 	this.active = active;
 	}
-	
+	public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

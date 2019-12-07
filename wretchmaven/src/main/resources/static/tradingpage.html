@@ -22,6 +22,8 @@
 
   <link href="css/agency.css" rel="stylesheet" th:href="@{/css/main.css}">
 
+  <script src="js/exchanging.js"></script> 
+
 </head>
 
 <body id="page-top">
@@ -111,7 +113,7 @@
           <h4 class="howitworks-heading">Rules</h4>
           <p class="text-muted">Rules are boring and we want to keep it simple. But please care about the following things:
               -	Stay anonymous! Revealing each other’s identity is lame
-              -	The gift value should be at least around *insert value*€ to ensure the chance to get cool stuff. On the other hand, you may send more valuable stuff to surprise the other one.
+              -	The gift value should be at least around 15€ to ensure the chance to get cool stuff. On the other hand, you may send more valuable stuff to surprise the other one.
               </p>
         </div>
       </div>
@@ -124,7 +126,13 @@
         <div class="row">
           <div class="col-lg-12 text-center text-white">
             <h2 class="section-heading text-uppercase">Exchange</h2>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="Profile.html">Start to Exchange</a>
+            <div class="intro-heading text-uppercase" id="address_text"> </div>
+            <a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"  id="rating_button1"></a>
+            <a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"  id="rating_button2"></a>
+            <a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"  id="rating_button3"></a>
+            <a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"  id="rating_button4"></a>
+            <a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"  id="rating_button5"></a>
+            <br><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" onclick="modify_exchange_button()" id="exchange-button">Exchange now!</a>
           </div>
         </div>
         
