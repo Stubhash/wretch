@@ -41,6 +41,13 @@ function modify_exchange_button()
 		exchange_button.textContent = "Wretcher rated!";
 		document.getElementById("address_text").textContent = " ";
 
+			var p1 = document.createElement("P");
+			var p2 = document.createElement("P");
+			p1.appendChild(document.createTextNode("Wrate your wretched gift from 1-5!"));
+			p2.appendChild(document.createTextNode("If you don't click a santa clause your Wretcher won't be rated!"));
+			document.getElementById("not_rated_warning").appendChild(p1);
+			document.getElementById("not_rated_warning").appendChild(p2);
+
 		document.getElementById('rating_button1').style.visibility='visible';
 		document.getElementById('rating_button2').style.visibility='visible';
 		document.getElementById('rating_button3').style.visibility='visible';
@@ -52,6 +59,7 @@ function modify_exchange_button()
 	else {
 		exchange_button.textContent = "Exchange now!";
 		document.getElementById("exchange-button").textContent = exchange_button.textContent;
+				document.getElementById("not_rated_warning").textContent = " ";
 
 		document.getElementById('rating_button1').style.visibility='hidden';
 		document.getElementById('rating_button2').style.visibility='hidden';
