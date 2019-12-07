@@ -23,9 +23,7 @@ public class User {
 	private String gender;
 	@Column(name = "active")
 	private int active;
-	@Column(name = "roles")
-	 @ManyToMany
-	    private Set<Role> roles;
+	
 	 @Transient
 	    private String passwordConfirm;
 
@@ -79,11 +77,5 @@ public class User {
 	public void setActive(int active) {
 	this.active = active;
 	}
-	public Set<Role> getRoles() {
-        return roles;
-    }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 }

@@ -40,7 +40,7 @@ public class UserController {
 
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcome";
+        return "/tradingpage.html";
     }
 
     @GetMapping("/login")
@@ -54,9 +54,9 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping({"/", "/welcome"})
+    @GetMapping({"/", "/index"})
     public String welcome(Model model) {
-        return "welcome";
+        return "index";
     }
 }
 
