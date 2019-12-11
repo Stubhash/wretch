@@ -42,8 +42,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.headers().frameOptions().disable().and().csrf().disable().authorizeRequests()
 				.antMatchers("/index.html", "/registration,html", "/css", "/js", "/img", "/bootstrap", "/privat.html",
 						"/register.html", "/tou.html", "/login.html", "/tradingpage.html")
-				.permitAll().antMatchers("/tradingpage.html").authenticated().and().formLogin().loginPage("/login.html")
-				.defaultSuccessUrl("/tradingpage.html").and().logout().logoutSuccessUrl("/index.html");
+				.permitAll().antMatchers("/tradingpage.html").authenticated().and().formLogin()
+				.defaultSuccessUrl("/tradingpage.html");
 	}
 
 	@Autowired

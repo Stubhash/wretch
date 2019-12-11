@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import com.wretch.wretchmaven.model.User;
 import com.wretch.wretchmaven.repository.UserRepository;
 
-@Service("UserService")
+@Service("userDetailsService")
 @Transactional
 public class CustomUserDetailsService implements UserDetailsService{
     @Autowired
