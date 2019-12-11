@@ -3,7 +3,6 @@ package com.wretch.wretchmaven.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
 @Table(name = "user")
 public class User {
@@ -21,6 +20,76 @@ public class User {
 	private String lastname;
 	@Column(name = "gender")
 	private String gender;
+	@Column(name = "country")
+	private String country;
+	@Column(name = "city")
+	private String city;
+	@Column(name = "zipcode")
+	private String zipcode;
+	@Column(name = "street")
+	private String street;
+	@Column(name = "houseNr")
+	private String houseNr;
+
+	public User(String username, String email, String password, String name, String lastname, String gender,
+			String country, String city, String zipcode, String street, String houseNr, @NotNull boolean enabled,
+			String passwordConfirm) {
+		super();
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.name = name;
+		this.lastname = lastname;
+		this.gender = gender;
+		this.country = country;
+		this.city = city;
+		this.zipcode = zipcode;
+		this.street = street;
+		this.houseNr = houseNr;
+		this.enabled = enabled;
+		this.passwordConfirm = passwordConfirm;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getHouseNr() {
+		return houseNr;
+	}
+
+	public void setHouseNr(String houseNr) {
+		this.houseNr = houseNr;
+	}
+
 	@NotNull
 	@Column(name = "enabled")
 	private boolean enabled;
@@ -29,21 +98,7 @@ public class User {
 	private String passwordConfirm;
 
 	public User() {
-		
-	}
 
-	public User(String username, String email, String password, String name, String lastname, String gender, int active,
-		 boolean enabled, String passwordConfirm) {
-		super();
-		this.username = username;
-		this.email = email;
-		this.password = password;
-		this.name = name;
-		this.lastname = lastname;
-		this.gender = gender;
-		
-		this.enabled = enabled;
-		this.passwordConfirm = passwordConfirm;
 	}
 
 	public boolean isEnabled() {
@@ -109,7 +164,5 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-
 
 }
