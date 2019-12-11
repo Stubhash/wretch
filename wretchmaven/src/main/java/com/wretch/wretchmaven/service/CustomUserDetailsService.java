@@ -1,5 +1,7 @@
 package com.wretch.wretchmaven.service;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -12,8 +14,8 @@ import org.springframework.stereotype.Service;
 import com.wretch.wretchmaven.model.User;
 import com.wretch.wretchmaven.repository.UserRepository;
 
-
-@Service
+@Service("UserService")
+@Transactional
 public class CustomUserDetailsService implements UserDetailsService{
     @Autowired
     private UserRepository userRepository;

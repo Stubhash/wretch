@@ -27,7 +27,14 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		admin.setEmail("mitbringsel.balola@web.de");
 		admin.setEnabled(true);
 		userRepository.save(admin);
-
+		
+		User test = new User();
+		test.setUsername("test");
+		test.setPassword(new BCryptPasswordEncoder().encode("password") );
+		test.setEnabled(true);
+		userRepository.save(test);
 	}
+	
+	
 
 }

@@ -9,7 +9,6 @@ import javax.validation.constraints.NotNull;
 public class User {
 
 	@Id
-	
 	@Column(name = "username")
 	private String username;
 	@Column(name = "email")
@@ -22,11 +21,30 @@ public class User {
 	private String lastname;
 	@Column(name = "gender")
 	private String gender;
-	@Column(name = "active")
-	private int active;
-	@Column(name = "enabled")
 	@NotNull
+	@Column(name = "enabled")
 	private boolean enabled;
+
+	@Transient
+	private String passwordConfirm;
+
+	public User() {
+		
+	}
+
+	public User(String username, String email, String password, String name, String lastname, String gender, int active,
+		 boolean enabled, String passwordConfirm) {
+		super();
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.name = name;
+		this.lastname = lastname;
+		this.gender = gender;
+		
+		this.enabled = enabled;
+		this.passwordConfirm = passwordConfirm;
+	}
 
 	public boolean isEnabled() {
 		return enabled;
@@ -35,9 +53,6 @@ public class User {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-
-	@Transient
-	private String passwordConfirm;
 
 	public String getPasswordConfirm() {
 		return passwordConfirm;
@@ -95,12 +110,6 @@ public class User {
 		this.gender = gender;
 	}
 
-	public int getActive() {
-		return active;
-	}
 
-	public void setActive(int active) {
-		this.active = active;
-	}
 
 }
