@@ -341,9 +341,34 @@ regButton.addEventListener("click", function() {
 		finalcheck = false;
 	}
 
-	// save in database
-	if (RegVal.finalcheck == true || true) {
-		// here sql statement to create a new user in the database
+	
+	if (RegVal.finalcheck == true) {
+		controller.newUser = function () {
+	        
+	        newUser = {
+	            username: username,
+	            password: password,
+	            confirmPassword: confirmPassword,
+	            eMail: eMail,
+	            firstname: firstname,
+	            lastname: lastname;
+	        	gender: gender,
+	        	country: country,
+	        	city: city,
+	        	zipCode: zipCode,
+	        	street: street,
+	        	housenr: houseNumber,
+	        };
+	        $http.post("/newUser", newUser).then(function () {
+	            window.location.assign("/login.html")
+	        }, function (reason) {
+	            if (reason.data === 1) {
+	                controller.passwordErr();
+	            } else {
+	                controller.usernameErr();
+	            }
+	        })
+	    };
 	}
 
 });

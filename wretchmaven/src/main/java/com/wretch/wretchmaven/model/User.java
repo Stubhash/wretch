@@ -3,6 +3,8 @@ package com.wretch.wretchmaven.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -30,11 +32,39 @@ public class User {
 	private String street;
 	@Column(name = "houseNr")
 	private String houseNr;
+	@Column(name = "points")
+	private String points;
+	@Column(name= "tradingpartner")
+	private String tradingpartner;
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getPoints() {
+		return points;
+	}
+
+	public void setPoints(String points) {
+		this.points = points;
+	}
+
+	public String getTradingpartner() {
+		return tradingpartner;
+	}
+
+	public void setTradingpartner(String tradingpartner) {
+		this.tradingpartner = tradingpartner;
+	}
 
 	public User(String username, String email, String password, String name, String lastname, String gender,
 			String country, String city, String zipcode, String street, String houseNr, @NotNull boolean enabled,
 			String passwordConfirm) {
-		super();
+	
 		this.username = username;
 		this.email = email;
 		this.password = password;

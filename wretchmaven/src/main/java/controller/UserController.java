@@ -25,6 +25,13 @@ public class UserController {
 	Errors validationExceportion;
 	private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
 
+	@RequestMapping(method = RequestMethod.POST, value="/rating")
+	public void Ratingpoints(User user, String points) {
+		 String partner =  user.getTradingpartner();
+		 User trading = userRepo.findByUsername(partner);
+		  trading.setPoints(trading.getPoints()+points);
+	}
+	
 	@RequestMapping(method = RequestMethod.POST, value = "/newUser")
 	private ResponseEntity<Integer> newUser(@RequestBody User newUser) {
 
@@ -45,6 +52,7 @@ public class UserController {
 				user.setName(newUser.getName());
 				user.setStreet(newUser.getStreet());
 				user.setZipcode(newUser.getZipcode());
+				userRepo.save(user);
 			} else {
 				return ResponseEntity.badRequest().body(1);
 			}
@@ -54,4 +62,20 @@ public class UserController {
 		return ResponseEntity.ok().body(null);
 	}
 
+    @RequestMapping(method = RequestMethod.POST, value = "/setPartner")
+    private void getAllUsers() {
+        Iterable<User> allUsers = userRepo.findAll();
+        User user1 = allUsers.iterator().next();
+        User user2 = allUsers.iterator().next();
+        if(user1.getUsername() != user2.getUsername()) {
+        user1.setTradingpartner(user2.getUsername());
+        user2.setTradingpartner(user1.getUsername());
+    }
+        else {
+        	 user2 = allUsers.iterator().next();
+        	 user1.setTradingpartner(user2.getUsername());
+             user2.setTradingpartner(user1.getUsername());
+        }
+        
+    }
 }
