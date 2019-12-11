@@ -43,161 +43,147 @@
 				<input type="submit" onclick="location.href='login.html'"
 					value="Login" /><br />
 			</div>
+			<form action="/login" method="post">
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel"
+						aria-labelledby="home-tab">
+						<div class="row register-form">
 
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade show active" id="home" role="tabpanel"
-					aria-labelledby="home-tab">
-					<div class="row register-form">
+							<div class="col">
 
-						<div class="col">
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="Username *" value="" id="username" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertusername"
+									style="display: none;">
+									<strong>Your username's lenght is wrong or it is
+										already taken!</strong>
 
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Username *"
-									value="" id="username" />
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="First Name *" value="" id="firstName" />
+								</div>
+
+								<div class="alert alert-danger" role="alert" id="alertfirstname"
+									style="display: none;">
+									<strong>Enter a valid first name!</strong>
+
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="Last Name *" value="" id="lastName" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertlastname"
+									style="display: none;">
+									<strong>Enter a valid last name!</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="password" class="form-control"
+										placeholder="Password *" value="" id="password" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertpassword"
+									style="display: none;">
+									<strong>The password must be at least 8 digits long.</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="password" class="form-control"
+										placeholder="Confirm Password *" value="" id="confirmpassword" />
+								</div>
+								<div class="alert alert-danger" role="alert"
+									id="alertconfirmpassword" style="display: none;">
+									<strong>The passwords are not identical.</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="email" class="form-control"
+										placeholder="Your Email *" value="" id="email" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertemail"
+									style="display: none;">
+									<strong>Please enter a valid mail adress.</strong>
+								</div>
 							</div>
-							<div class="alert alert-danger" role="alert" id="alertusername"
-								style="display: none;">
-								<strong>Your username's lenght is wrong or it is already taken!</strong>
 
-							</div>
+							<div class="col">
 
-							<div class="form-group">
-								<input type="text" class="form-control"
-									placeholder="First Name *" value="" id="firstName" />
-							</div>
+								<div class="form-group">
+									<select class="form-control" id="gender">
+										<option class="hidden" selected disabled>Please
+											select your gender</option>
+										<option value="male">male</option>
+										<option value="female">female</option>
+										<option value="others">other</option>
+									</select>
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertgender"
+									style="display: none;">
+									<strong>Please select a gender.</strong>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="country">
+										<option class="hidden" selected disabled>Please
+											select your country</option>
+										<option value="DE">DE</option>
+										<option value="FR">FR</option>
+										<option value="UK">UK</option>
+									</select>
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertcountry"
+									style="display: none;">
+									<strong>Please select a country.</strong>
+								</div>
 
-							<div class="alert alert-danger" role="alert" id="alertfirstname"
-								style="display: none;">
-								<strong>Enter a valid first name!</strong>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="City *"
+										value="" id="city" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertcity"
+									style="display: none;">
+									<strong>Enter a valid city!</strong>
+								</div>
 
-							</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Zipcode *"
+										value="" id="zipcode" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertzipcode"
+									style="display: none;">
+									<strong>Enter a valid zipcode!</strong>
+								</div>
 
-							<div class="form-group">
-								<input type="text" class="form-control"
-									placeholder="Last Name *" value="" id="lastName" />
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertlastname"
-								style="display: none;">
-								<strong>Enter a valid last name!</strong>
-							</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Street *"
+										value="" id="street" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertstreet"
+									style="display: none;">
+									<strong>Enter a valid street!</strong>
+								</div>
 
-							<div class="form-group">
-								<input type="password" class="form-control"
-									placeholder="Password *" value="" id="password" />
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertpassword"
-								style="display: none;">
-								<strong>The password must be at least 8 digits long.</strong>
-							</div>
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="House Number *"  id="housenumber" />
+								</div>
+								<div class="alert alert-danger" role="alert"
+									id="alerthousenumber" style="display: none;">
+									<strong>Enter a house number!</strong>
+								</div>
 
-							<div class="form-group">
-								<input type="password" class="form-control"
-									placeholder="Confirm Password *" value="" id="confirmpassword" />
-							</div>
-							<div class="alert alert-danger" role="alert"
-								id="alertconfirmpassword" style="display: none;">
-								<strong>The passwords are not identical.</strong>
-							</div>
 
-							<div class="form-group">
-								<input type="email" class="form-control"
-									placeholder="Your Email *" value="" id="email"/>
+								<input type="submit" class="btnRegister" value="register"
+									id="RegistryButton" />
 							</div>
-							<div class="alert alert-danger" role="alert" id="alertemail"
-								style="display: none;">
-								<strong>Please enter a valid mail adress.</strong>
-							</div>
-
-							
-
 						</div>
 
-
-
-
-
-
-						<div class="col">
-						
-						
-						
-						
-
-							<div class="form-group">
-
-								<select class="form-control" id="gender">
-
-									<option class="hidden" selected disabled>Please select
-										your gender</option>
-									<option value="male">male</option>
-									<option value="female">female</option>
-									<option value="others">other</option>
-								</select>
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertgender"
-								style="display: none;">
-								<strong>Please select a gender.</strong>
-							</div>
-
-							<div class="form-group">
-								<select class="form-control" id="country">
-									<option class="hidden" selected disabled>Please select
-										your country</option>
-									<option value="DE">DE</option>
-									<option value="FR">FR</option>
-									<option value="UK">UK</option>
-								</select>
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertcountry"
-								style="display: none;">
-								<strong>Please select a country.</strong>
-							</div>
-
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="City *"
-									value="" id="city" />
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertcity"
-								style="display: none;">
-								<strong>Enter a valid city!</strong>
-							</div>
-
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Zipcode *"
-									value="" id="zipcode" />
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertzipcode"
-								style="display: none;">
-								<strong>Enter a valid zipcode!</strong>
-							</div>
-
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Street *"
-									value="" id="street" />
-							</div>
-							<div class="alert alert-danger" role="alert" id="alertstreet"
-								style="display: none;">
-								<strong>Enter a valid street!</strong>
-							</div>
-
-							<div class="form-group">
-								<input type="text" class="form-control"
-									placeholder="House Number *" value="" id="housenumber" />
-							</div>
-							<div class="alert alert-danger" role="alert"
-								id="alerthousenumber" style="display: none;">
-								<strong>Enter a house number!</strong>
-							</div>
-
-
-							<input type="submit" class="btnRegister" value="Register"
-								id="RegistryButton" />
-
-						</div>
 					</div>
-
 				</div>
-			</div>
+			</form>
 		</div>
 		<footer class="footer footer-expand-lg fixed-bottom bg-light">
 			<div class="container">
