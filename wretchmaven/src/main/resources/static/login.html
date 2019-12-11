@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="https://www.thymeleaf.org"
-	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +24,8 @@
 <!-- muss noch als url eingebunden werden -->
 
 <link href="css/agency.css" rel="stylesheet"
-	th:href="@{/css/agency.css}">
-<link href="css/register.css" rel="stylesheet"
-	th:href="@{/css/register.css}">
+	>
+<link href="css/register.css" rel="stylesheet">
 
 
 </head>
@@ -39,8 +36,8 @@
 			<a class="navbar-brand js-scroll-trigger" href="index.html">Wretch</a>
 		</div>
 	</nav>
-	<div class="container register" th:fragment="content">
-		<form name="f" th:action="@{/login}" method="post">
+	<div class="container register" >
+		<form action="/login" method="post">
 			<fieldset>
 				<div class="row">
 					<div class="col-md-3 register-left">
@@ -55,7 +52,7 @@
 								<div class="col">
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="Username"
-											value="" id="username" />
+											name="username"/>
 									</div>
 									<div class="alert alert-danger" role="alert" id="alertusername"
 										style="display: none;">
@@ -64,15 +61,15 @@
 
 									<div class="form-group">
 										<input type="password" class="form-control"
-											placeholder="Password *" value="" id="password" />
+											placeholder="Password *"  name="password" />
 									</div>
 									<div class="alert alert-danger" role="alert" id="alertpassword"
 										style="display: none;">
 										<strong>Incorrect password!</strong>
 									</div>
 
-									<input type="submit" class="btnRegister" data-dismiss='alert'
-										value="Login" onclick="location.href='tradingpage.html'" id="LoginButton"/>
+									<input type="submit" class="btnRegister" 
+										value="Login"  />
 								</div>
 							</div>
 						</div>
@@ -107,18 +104,12 @@
 						<li class="list-inline-item"><a href="privat.html"
 							style="color: red;">Privacy Policy</a></li>
 						<li class="list-inline-item"><a href="tou.html"
-							style="color: red;">Terms of Use</a></li>
+							style="color: red;">Therms of Use</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</footer>
-	</div>
-
-	<!--  alt:script src="bootstrap/jquery/jquery.min.js"></script -->
-	<!-- alt: script src="bootstrap/bootstrap/js/bootstrap.min.js"></script -->
-	<!-- script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script -->
-	<!-- script src="bootstrap/jquery-easing/jquery.easing.min.js"></script -->
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
