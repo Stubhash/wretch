@@ -33,6 +33,37 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		test.setPassword(new BCryptPasswordEncoder().encode("password") );
 		test.setEnabled(true);
 		userRepository.save(test);
+		
+		User owo = new User();
+		owo.setUsername("owo");
+		owo.setPassword(new BCryptPasswordEncoder().encode("password") );
+		owo.setEnabled(true);
+		userRepository.save(owo);
+		
+		User doge = new User();
+		doge.setUsername("doge");
+		doge.setPassword(new BCryptPasswordEncoder().encode("password") );
+		doge.setEnabled(true);
+		userRepository.save(doge);
+		
+		User F4K3R = new User();
+		F4K3R.setUsername("F4K3R");
+		F4K3R.setPassword(new BCryptPasswordEncoder().encode("password") );
+		F4K3R.setEnabled(true);
+		userRepository.save(F4K3R);
+		
+		User doinb = new User();
+		doinb.setUsername("doinb");
+		doinb.setPassword(new BCryptPasswordEncoder().encode("password") );
+		doinb.setEnabled(true);
+		userRepository.save(doinb);
+		
+		User jollyPuddingHoops = new User();
+		jollyPuddingHoops.setUsername("jollyPuddingHoops");
+		jollyPuddingHoops.setPassword(new BCryptPasswordEncoder().encode("password") );
+		jollyPuddingHoops.setEnabled(true);
+		userRepository.save(jollyPuddingHoops);
+		
 	}
 	
 	
