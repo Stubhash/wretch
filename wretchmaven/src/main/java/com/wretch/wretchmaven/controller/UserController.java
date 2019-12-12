@@ -34,7 +34,7 @@ public class UserController {
 	private ResponseEntity<Integer> newUser(@RequestBody User newUser) {
 		
 		
-		if (newUser.getUsername().matches("[\\w- ]+") && newUser.getUsername().length() >= 5) {
+		if (newUser.getUsername().matches("[\\w- ]+") && newUser.getUsername().length() >= 5  && checkUser(newUser)) {
 			if (newUser.getPassword().equals(newUser.getPasswordConfirm()) && newUser.getPassword().length() >= 5) {
 				User user = new User();
 				user.setUsername(newUser.getUsername());
@@ -74,5 +74,32 @@ public class UserController {
              user2.setTradingpartner(user.getUsername());
         }
         
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, value = "/setPartner")
+    private void setScoreboard(User user) {
+        Iterable<User> allUsers = userRepo.findAll();
+        User user2 = allUsers.iterator().next();
+        if(user.getUsername() != user2.getUsername()) {
+        user.setTradingpartner(user2.getUsername());
+        user2.setTradingpartner(user.getUsername());
+    }
+        else {
+        	 user2 = allUsers.iterator().next();
+        	 user.setTradingpartner(user2.getUsername());
+             user2.setTradingpartner(user.getUsername());
+        }
+        
+    }
+    
+    private boolean checkUser(User user) {
+    	 Iterable<User> allUsers = userRepo.findAll();
+    	 for (User user2 : allUsers) {
+			if(user2.getUsername() == user.getUsername()) {
+				return false;
+			}
+		}
+    	return true;
+    	
     }
 }
