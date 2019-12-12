@@ -28,7 +28,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		admin.setEmail("mitbringsel.balola@web.uk");
 		admin.setEnabled(true);
 		admin.setCity("Lafayette");
-		admin.setCountry("United Kingdom");
+		admin.setCountry("UK");
 		admin.setGender("male");
 		admin.setHouseNr("32");
 		admin.setLastname("McGill");
@@ -43,7 +43,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		test.setEnabled(true);
 		test.setEmail("amanda@web.uk");
 		test.setCity("Bondville");
-		test.setCountry("United Kingdom");
+		test.setCountry("UK");
 		test.setGender("female");
 		test.setHouseNr("37");
 		test.setLastname("Vaughn");
@@ -59,7 +59,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		owo.setEnabled(true);
 		owo.setEmail("claudetteBrunault@cuvox.fr");
 		owo.setCity("LA GARENNE-COLOMBES");
-		owo.setCountry("France");
+		owo.setCountry("FR");
 		owo.setGender("female");
 		owo.setHouseNr("54");
 		owo.setLastname("Brunault");
@@ -75,7 +75,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		doge.setEnabled(true);
 		doge.setEmail("dominikBerg@cuvox.de");
 		doge.setCity("Hohenlockstedt ");
-		doge.setCountry("Germany");
+		doge.setCountry("DE");
 		doge.setGender("male");
 		doge.setHouseNr("86");
 		doge.setLastname("Berg");
@@ -90,7 +90,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		F4K3R.setEnabled(true);
 		F4K3R.setCity("Dillingen ");
 		F4K3R.setEmail("leahWaechter@einrot.com");
-		F4K3R.setCountry("Germany");
+		F4K3R.setCountry("DE");
 		F4K3R.setGender("female");
 		F4K3R.setHouseNr("27");
 		F4K3R.setLastname("Waechter");
@@ -107,7 +107,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		jollyPuddingHoops.setEnabled(true);
 		jollyPuddingHoops.setEmail("arnaudeLefebvre@cuvox.fr");
 		jollyPuddingHoops.setCity("MONTPELLIER ");
-		jollyPuddingHoops.setCountry("France");
+		jollyPuddingHoops.setCountry("FR");
 		jollyPuddingHoops.setGender("male");
 		jollyPuddingHoops.setHouseNr("87");
 		jollyPuddingHoops.setLastname("Lefebvre");

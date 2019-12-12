@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.wretch.wretchmaven.service.CustomUserDetailsService;
 
@@ -41,9 +42,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.headers().frameOptions().disable().and().csrf().disable().authorizeRequests()
 				.antMatchers("/index.html", "/registration,html", "/css", "/js", "/img", "/bootstrap", "/privat.html",
-						"/register.html", "/tou.html", "/login.html", "/tradingpage.html")
+						"/register.html", "/tou.html", "/login.html")
 				.permitAll().antMatchers("/tradingpage.html").authenticated().and().formLogin().loginPage("/login")
-				.defaultSuccessUrl("/tradingpage.html");
+				.defaultSuccessUrl("/tradingpage.html").and().logout().logoutUrl("/logout").logoutSuccessUrl("/index.html");
 	}
 
 	@Autowired
