@@ -1,4 +1,5 @@
 var app = angular.module("setPoints", []);
+
 app.controller("points", function($http, $scope) {
 	var controller = this;
 
@@ -12,5 +13,6 @@ app.controller("points", function($http, $scope) {
 		};
 
 		$http.post("/rating", Userpoints);
+		
 	}
 });
