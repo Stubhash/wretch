@@ -144,22 +144,17 @@
 						<h2 class="section-heading text-uppercase">Exchange</h2>
 						<div class="intro-heading text-uppercase" id="address_text">
 						</div>
-						<div class="intro-heading text-uppercase" id="not_rated_warning">
+						<div class="intro-heading text-uppercase" id="rate_wretcher"> Rate your wretched gift from 1-5!
 						</div>
 
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
-							id="rating_button1" ng-click ="One">🎅</a> <a
-							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
-							id="rating_button2" data-ng-model ="Two">🎅</a> <a
-							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
-							id="rating_button3" data-ng-model ="Three">🎅</a> <a
-							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
-							id="rating_button4" data-ng-model ="Four">🎅</a> <a
-							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
-							id="rating_button5" data-ng-model ="Five">🎅</a> <br> <br> <a
-							class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-							onclick="modify_exchange_button()" id="exchange-button">Exchange
-							now!</a>
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(1)" id="rating_button1" ng-click ="One">🎅</a> 
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(2)" id="rating_button2" data-ng-model ="Two">🎅</a> 
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(3)" id="rating_button3" data-ng-model ="Three">🎅</a>
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(4)" id="rating_button4" data-ng-model ="Four">🎅</a>
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(5)" id="rating_button5" data-ng-model ="Five">🎅</a> 
+						<br> <br> 
+						<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"onclick="modify_exchange_button()" id="exchange-button">Exchange now!</a>
+
 					</div>
 				</div>
 			</form>
