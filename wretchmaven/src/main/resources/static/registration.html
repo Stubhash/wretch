@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" data-ng-app="registration">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Wretch Sign In</title>
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css">
@@ -31,20 +34,21 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
 		<div class="container">
 
 			<a class="navbar-brand js-scroll-trigger" href="index.html">Wretch</a>
 		</div>
 	</nav>
-	<div class="container register">
+	<div class="container register" >
 		<div class="row">
 			<div class="col-md-3 register-left">
 				<input type="submit" onclick="location.href='login.html'"
 					value="Login" /><br />
 			</div>
-			<form action="/login" method="post">
-				<div class="tab-content" id="myTabContent">
+			
+				<div class="tab-content" id="myTabContent" data-ng-controller="registrationCtrl">
+				<form data-ng-submit="newUser()">
 					<div class="tab-pane fade show active" id="home" role="tabpanel"
 						aria-labelledby="home-tab">
 						<div class="row register-form">
@@ -63,8 +67,8 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control"
-										placeholder="First Name *" name="firstname" id="firstName" />
+									<input type="text" class="form-control" data-ng-model="name"
+										placeholder="First Name *" name="name" id="name" />
 								</div>
 
 								<div class="alert alert-danger" role="alert" id="alertfirstname"
@@ -75,7 +79,7 @@
 
 								<div class="form-group">
 									<input type="text" class="form-control"
-										placeholder="Last Name *" name="lastname" id="lastName" />
+										placeholder="Last Name *" name="lastname" id="lastname" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertlastname"
 									style="display: none;">
@@ -93,7 +97,7 @@
 
 								<div class="form-group">
 									<input type="password" class="form-control"
-										placeholder="Confirm Password *" name="confirmpassword" id="confirmpassword" />
+										placeholder="Confirm Password *" name="passwordConfirm" id="passwordConfirm" />
 								</div>
 								<div class="alert alert-danger" role="alert"
 									id="alertconfirmpassword" style="display: none;">
@@ -168,7 +172,7 @@
 
 								<div class="form-group">
 									<input type="text" class="form-control"
-										placeholder="House Number *" name="houseNr" id="housenumber" />
+										placeholder="House Number *" name="housenr" id="housenr" />
 								</div>
 								<div class="alert alert-danger" role="alert"
 									id="alerthousenumber" style="display: none;">
@@ -177,13 +181,14 @@
 
 
 								<input type="submit" class="btnRegister" value="register"
-									id="RegistryButton" />
+									 />
 							</div>
 						</div>
 
 					</div>
+					</form>
 				</div>
-			</form>
+			
 		</div>
 		<footer class="footer footer-expand-lg fixed-bottom bg-light">
 			<div class="container">
@@ -218,9 +223,11 @@
 		</footer>
 
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	
+ 
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="js/registry-validation.js"></script>
