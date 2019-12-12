@@ -196,41 +196,60 @@ var app = angular.module("registration", []);
 app.controller("registrationCtrl", function($http, $scope) {
 	var controller = this;
 
-	$scope.test = function() {
-		console.log("")
-	}
+	
 
-	controller.users = [];
-	$scope.newUser = function() {
-		var username = $scope.name;
-		var name = document.getElementById('name').value;
-		var lastname = document.getElementById('lastname').value;
-		var password = document.getElementById('password').value;
-		var passwordConfirm = document.getElementById('passwordConfirm').value;
-		var email = document.getElementById('email').value;
-		var gender = document.getElementById('gender').value;
-		var city = document.getElementById('city').value;
-		var zipcode = document.getElementById('zipcode').value;
-		var street = document.getElementById('street').value;
-		var housenr = document.getElementById('housenr').value;
-		var country = document.getElementById('country').value;
-		newUserObj = {
-			username : username,
-			password : password,
-			passwordConfirm : passwordConfirm,
-			email : email,
-			name : name,
-			lastname : lastname,
-			gender : gender,
-			country : country,
-			city : city,
-			zipcode : zipcode,
-			street : street,
-			housenr : housenr,
-		};
 
-		$http.post("/newUser", newUserObj).then(function() {
-			window.location.assign("/login.html")
-		})
-	}
+		controller.users = [];
+		$scope.newUser = function() {
+			
+			// fehlerbehandlung
+			var finalcheck = true;
+			//check username
+			alertusername = document.getElementById("alertusername");
+			usernametemp = document.getElementById("username").value;
+			if (usernametemp.length > 0){
+				alertusername.style.display = "none";
+				finalcheck = true;
+			}
+			else {
+				alertusername.style.display = "block";
+				finalcheck = false;
+			}
+			
+			
+			
+			if (finalcheck == true){
+			var username = $scope.username;
+			var name = $scope.name;
+			var lastname = $scope.lastname;
+			var password = $scope.password;
+			var passwordConfirm = $scope.passwordConfirm;
+			var email = $scope.email;
+			var gender = $scope.gender;
+			var city = $scope.city;
+			var zipcode = $scope.zipcode;
+			var street = $scope.street;
+			var housenr = $scope.housenr;
+			var country = $scope.country;
+			newUserObj = {
+				username : username,
+				password : password,
+				passwordConfirm : passwordConfirm,
+				email : email,
+				name : name,
+				lastname : lastname,
+				gender : gender,
+				country : country,
+				city : city,
+				zipcode : zipcode,
+				street : street,
+				housenr : housenr,
+			};
+
+			$http.post("/newUser", newUserObj).then(function() {
+				window.location.assign("/login.html")
+			})
+			}
+		}
+	
 });

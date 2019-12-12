@@ -56,10 +56,10 @@
 							<div class="col">
 
 								<div class="form-group">
-									<input type="text" class="form-control"
+									<input type="text" class="form-control" data-ng-model="username"
 										placeholder="Username *" name="username" id="username" />
 								</div>
-								<div class="alert alert-danger" role="alert" id="alertusername"
+								<div class="alert alert-danger" data-ng-model="alertusername" role="alert" id="alertusername"
 									style="display: none;">
 									<strong>Your username's lenght is wrong or it is
 										already taken!</strong>
@@ -71,14 +71,14 @@
 										placeholder="First Name *" name="name" id="name" />
 								</div>
 
-								<div class="alert alert-danger" role="alert" id="alertfirstname"
+								<div class="alert alert-danger" role="alert" id="alertname"
 									style="display: none;">
 									<strong>Enter a valid first name!</strong>
 
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control"
+									<input type="text" class="form-control" data-ng-model="lastname"
 										placeholder="Last Name *" name="lastname" id="lastname" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertlastname"
@@ -87,7 +87,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="password" class="form-control"
+									<input type="password" class="form-control" data-ng-model="password"
 										placeholder="Password *" name="password" id="password" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertpassword"
@@ -96,8 +96,8 @@
 								</div>
 
 								<div class="form-group">
-									<input type="password" class="form-control"
-										placeholder="Confirm Password *" name="passwordConfirm" id="passwordConfirm" />
+									<input type="password" class="form-control" data-ng-model="passwordConfirm"
+										placeholder="Confirm Password *" name="passwordConfirm" id="passwordconfirm" />
 								</div>
 								<div class="alert alert-danger" role="alert"
 									id="alertconfirmpassword" style="display: none;">
@@ -105,7 +105,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="email" class="form-control"
+									<input type="email" class="form-control" data-ng-model="email"
 										placeholder="Your Email *" name="email" id="email" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertemail"
@@ -117,7 +117,7 @@
 							<div class="col">
 
 								<div class="form-group">
-									<select class="form-control" id="gender" name="gender">
+									<select class="form-control" data-ng-model="gender" id="gender" name="gender">
 										<option class="hidden" selected disabled>Please
 											select your gender</option>
 										<option value="male">male</option>
@@ -130,7 +130,7 @@
 									<strong>Please select a gender.</strong>
 								</div>
 								<div class="form-group">
-									<select class="form-control" id="country" name="country">
+									<select class="form-control" data-ng-model="country" id="country" name="country">
 										<option class="hidden" selected disabled>Please
 											select your country</option>
 										<option value="DE">DE</option>
@@ -144,7 +144,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="City *"
+									<input type="text" class="form-control" data-ng-model="city" placeholder="City *"
 										name="city" id="city" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertcity"
@@ -153,7 +153,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Zipcode *"
+									<input type="text" class="form-control" data-ng-model="zipcode" placeholder="Zipcode *"
 										name="zipcode" id="zipcode" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertzipcode"
@@ -162,7 +162,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Street *"
+									<input type="text" class="form-control" data-ng-model="street" placeholder="Street *"
 										name="street" id="street" />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertstreet"
@@ -171,7 +171,7 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control"
+									<input type="text" class="form-control" data-ng-model="housenr"
 										placeholder="House Number *" name="housenr" id="housenr" />
 								</div>
 								<div class="alert alert-danger" role="alert"
