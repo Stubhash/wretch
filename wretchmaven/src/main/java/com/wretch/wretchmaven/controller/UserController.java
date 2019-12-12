@@ -61,18 +61,17 @@ public class UserController {
 	}
 
     @RequestMapping(method = RequestMethod.POST, value = "/setPartner")
-    private void getAllUsers() {
+    private void setPartner(User user) {
         Iterable<User> allUsers = userRepo.findAll();
-        User user1 = allUsers.iterator().next();
         User user2 = allUsers.iterator().next();
-        if(user1.getUsername() != user2.getUsername()) {
-        user1.setTradingpartner(user2.getUsername());
-        user2.setTradingpartner(user1.getUsername());
+        if(user.getUsername() != user2.getUsername()) {
+        user.setTradingpartner(user2.getUsername());
+        user2.setTradingpartner(user.getUsername());
     }
         else {
         	 user2 = allUsers.iterator().next();
-        	 user1.setTradingpartner(user2.getUsername());
-             user2.setTradingpartner(user1.getUsername());
+        	 user.setTradingpartner(user2.getUsername());
+             user2.setTradingpartner(user.getUsername());
         }
         
     }
