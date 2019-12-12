@@ -12,6 +12,7 @@ The web-application uses the following technology stack:
     MySQL Database
     Spring Boot
     Maven
+    Angular
 
 Preconditions and Installation
 
