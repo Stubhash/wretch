@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-ng-app="registration">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Wretch Sign In</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+<link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	id="bootstrap-css">
+<link href="css/agency.css" rel="stylesheet">
+<link href="css/register.css" rel="stylesheet">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="bootstrap/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<!-- muss noch als url eingebunden werden -->
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+		<div class="container">
+
+			<a class="navbar-brand js-scroll-trigger" href="index.html">Wretch</a>
+		</div>
+	</nav>
+	<div class="container register" >
+		<div class="row">
+			<div class="col-md-3 register-left">
+				<input type="submit" onclick="location.href='login.html'"
+					value="Login" /><br />
+			</div>
+			
+				<div class="tab-content" id="myTabContent" data-ng-controller="registrationCtrl">
+				<form data-ng-submit="newUser()">
+					<div class="tab-pane fade show active" id="home" role="tabpanel"
+						aria-labelledby="home-tab">
+						<div class="row register-form">
+
+							<div class="col">
+
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="Username *" name="username" id="username" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertusername"
+									style="display: none;">
+									<strong>Your username's lenght is wrong or it is
+										already taken!</strong>
+
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" data-ng-model="name"
+										placeholder="First Name *" name="name" id="name" />
+								</div>
+
+								<div class="alert alert-danger" role="alert" id="alertfirstname"
+									style="display: none;">
+									<strong>Enter a valid first name!</strong>
+
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="Last Name *" name="lastname" id="lastname" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertlastname"
+									style="display: none;">
+									<strong>Enter a valid last name!</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="password" class="form-control"
+										placeholder="Password *" name="password" id="password" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertpassword"
+									style="display: none;">
+									<strong>The password must be at least 8 digits long.</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="password" class="form-control"
+										placeholder="Confirm Password *" name="passwordConfirm" id="passwordConfirm" />
+								</div>
+								<div class="alert alert-danger" role="alert"
+									id="alertconfirmpassword" style="display: none;">
+									<strong>The passwords are not identical.</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="email" class="form-control"
+										placeholder="Your Email *" name="email" id="email" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertemail"
+									style="display: none;">
+									<strong>Please enter a valid mail adress.</strong>
+								</div>
+							</div>
+
+							<div class="col">
+
+								<div class="form-group">
+									<select class="form-control" id="gender" name="gender">
+										<option class="hidden" selected disabled>Please
+											select your gender</option>
+										<option value="male">male</option>
+										<option value="female">female</option>
+										<option value="others">other</option>
+									</select>
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertgender"
+									style="display: none;">
+									<strong>Please select a gender.</strong>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="country" name="country">
+										<option class="hidden" selected disabled>Please
+											select your country</option>
+										<option value="DE">DE</option>
+										<option value="FR">FR</option>
+										<option value="UK">UK</option>
+									</select>
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertcountry"
+									style="display: none;">
+									<strong>Please select a country.</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="City *"
+										name="city" id="city" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertcity"
+									style="display: none;">
+									<strong>Enter a valid city!</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Zipcode *"
+										name="zipcode" id="zipcode" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertzipcode"
+									style="display: none;">
+									<strong>Enter a valid zipcode!</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Street *"
+										name="street" id="street" />
+								</div>
+								<div class="alert alert-danger" role="alert" id="alertstreet"
+									style="display: none;">
+									<strong>Enter a valid street!</strong>
+								</div>
+
+								<div class="form-group">
+									<input type="text" class="form-control"
+										placeholder="House Number *" name="housenr" id="housenr" />
+								</div>
+								<div class="alert alert-danger" role="alert"
+									id="alerthousenumber" style="display: none;">
+									<strong>Enter a house number!</strong>
+								</div>
+
+
+								<input type="submit" class="btnRegister" value="register"
+									 />
+							</div>
+						</div>
+
+					</div>
+					</form>
+				</div>
+			
+		</div>
+		<footer class="footer footer-expand-lg fixed-bottom bg-light">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<span class="copyright">Copyright &copy; Wretch 2019</span>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline social-buttons">
+							<li class="list-inline-item"><a
+								href="https://twitter.com/Wretch84658255" target="_blank"> <i
+									class="fab fa-twitter"></i>
+							</a></li>
+							<li class="list-inline-item"><a href="#" target="_blank">
+									<i class="fab fa-facebook-f"></i>
+							</a></li>
+							<li class="list-inline-item"><a href="#" target="_blank">
+									<i class="fab fa-linkedin-in"></i>
+							</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline quicklinks">
+							<li class="list-inline-item"><a href="privat.html"
+								style="color: red;">Privacy Policy</a></li>
+							<li class="list-inline-item"><a href="tou.html"
+								style="color: red;">Terms of Use</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	
+ 
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="js/registry-validation.js"></script>
+</body>
+
+</html>
