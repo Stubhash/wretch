@@ -30,7 +30,7 @@ public class UserController {
 	private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
 
 	@RequestMapping(method = RequestMethod.POST, value="/rating")
-	public void Ratingpoints(User user, String points) {
+	public void Ratingpoints(User user, int points) {
 		 String partner =  user.getTradingpartner();
 		 User trading = userRepo.findByUsername(partner);
 		  trading.setPoints(trading.getPoints()+points);
@@ -56,6 +56,7 @@ public class UserController {
 				user.setName(newUser.getName());
 				user.setStreet(newUser.getStreet());
 				user.setZipcode(newUser.getZipcode());
+				user.setPoints(0);
 				userRepo.save(user);
 			} else {
 				return ResponseEntity.badRequest().body(0);
@@ -85,13 +86,8 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, value = "/getScore")
     private ResponseEntity getScore() {
     	List<User> users=userRepo.findAll();
-    	
-//    	Comparator<User> compareByScore = (User user1, User user2) -> 
-//        user1.getPoints().compareTo( user2.getPoints());
-//        
-//        Collections.sort(users ,compareByScore);
-        
-//    	users.sort(Comparator.comparing(User::getPoints));
+   	users.sort(Comparator.comparing(User::getPoints));
+   	Collections.reverse(users);
         return ResponseEntity.ok().body(users);
     	
     }

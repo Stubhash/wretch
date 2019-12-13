@@ -33,7 +33,7 @@ public class User {
 	@Column(name = "houseNr")
 	private String houseNr;
 	@Column(name = "points")
-	private String points;
+	private int points;
 	@Column(name= "tradingpartner")
 	private String tradingpartner;
 
@@ -45,11 +45,11 @@ public class User {
 		this.firstname = firstname;
 	}
 
-	public String getPoints() {
+	public int getPoints() {
 		return points;
 	}
 
-	public void setPoints(String points) {
+	public void setPoints(int points) {
 		this.points = points;
 	}
 

@@ -35,6 +35,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		admin.setName("Kyle");
 		admin.setStreet("Willow Oaks Lane");
 		admin.setZipcode("3458");
+		admin.setPoints(1234567);
 		userRepository.save(admin);
 		
 		User test = new User();
@@ -50,6 +51,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		test.setName("Amanda");
 		test.setStreet("Spring Street");
 		test.setZipcode("3774");
+		test.setPoints(10000);
 		userRepository.save(test);
 
 		
@@ -66,7 +68,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		owo.setName("Claudette");
 		owo.setStreet("rue de l'Aigle");
 		owo.setZipcode("92250");
-		userRepository.save(admin);
+		owo.setPoints(1235);
 		userRepository.save(owo);
 		
 		User doge = new User();
@@ -82,6 +84,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		doge.setName("Dominik");
 		doge.setStreet("An Der Urania");
 		doge.setZipcode("25551");
+		doge.setPoints(1234);
 		userRepository.save(doge);
 		
 		User F4K3R = new User();
@@ -97,6 +100,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		F4K3R.setName("Leah");
 		F4K3R.setStreet("Gotzkowskystraße");
 		F4K3R.setZipcode("6674");
+		F4K3R.setPoints(123);
 		userRepository.save(F4K3R);
 
 
@@ -114,6 +118,7 @@ public class Setup implements ApplicationListener<ContextRefreshedEvent> {
 		jollyPuddingHoops.setName("Arnaude");
 		jollyPuddingHoops.setStreet("rue de la Mare aux Carats");
 		jollyPuddingHoops.setZipcode("Arnaude");
+		jollyPuddingHoops.setPoints(12132165);
 		userRepository.save(jollyPuddingHoops);
 		
 	}
