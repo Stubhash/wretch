@@ -1,5 +1,9 @@
 package com.wretch.wretchmaven.controller;
 
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,8 +84,16 @@ public class UserController {
     
     @RequestMapping(method = RequestMethod.GET, value = "/getScore")
     private ResponseEntity getScore() {
+    	List<User> users=userRepo.findAll();
     	
-        return ResponseEntity.ok().body(userRepo.findAll());
+//    	Comparator<User> compareByScore = (User user1, User user2) -> 
+//        user1.getPoints().compareTo( user2.getPoints());
+//        
+//        Collections.sort(users ,compareByScore);
+        
+//    	users.sort(Comparator.comparing(User::getPoints));
+        return ResponseEntity.ok().body(users);
+    	
     }
     
     private boolean checkUser(User user) {
