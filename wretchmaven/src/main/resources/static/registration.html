@@ -8,8 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Wretch Sign In</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css">
@@ -34,20 +35,21 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 		<div class="container">
 
 			<a class="navbar-brand js-scroll-trigger" href="index.html">Wretch</a>
 		</div>
 	</nav>
-	<div class="container register" >
+	<div class="container register">
 		<div class="row">
 			<div class="col-md-3 register-left">
 				<input type="submit" onclick="location.href='login.html'"
 					value="Login" /><br />
 			</div>
-			
-				<div class="tab-content" id="myTabContent" data-ng-controller="registrationCtrl">
+
+			<div class="tab-content" id="myTabContent"
+				data-ng-controller="registrationCtrl">
 				<form data-ng-submit="newUser()">
 					<div class="tab-pane fade show active" id="home" role="tabpanel"
 						aria-labelledby="home-tab">
@@ -56,19 +58,20 @@
 							<div class="col">
 
 								<div class="form-group">
-									<input type="text" class="form-control" data-ng-model="username"
-										placeholder="Username *" name="username" id="username" />
+									<input type="text" class="form-control"
+										data-ng-model="username" placeholder="Username *"
+										name="username" id="username" required />
 								</div>
-								<div class="alert alert-danger" data-ng-model="alertusername" role="alert" id="alertusername"
-									style="display: none;">
-									<strong>Your username's lenght is wrong or it is
-										already taken!</strong>
+								<div class="alert alert-danger" data-ng-model="alertusername"
+									role="alert" id="alertusername" style="display: none;">
+									<strong>Your username has to at least 5 characters
+										long or it is already taken!</strong>
 
 								</div>
 
 								<div class="form-group">
 									<input type="text" class="form-control" data-ng-model="name"
-										placeholder="First Name *" name="name" id="name" />
+										placeholder="First Name *" name="name" id="name" required />
 								</div>
 
 								<div class="alert alert-danger" role="alert" id="alertname"
@@ -78,8 +81,9 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" data-ng-model="lastname"
-										placeholder="Last Name *" name="lastname" id="lastname" />
+									<input type="text" class="form-control"
+										data-ng-model="lastname" placeholder="Last Name *"
+										name="lastname" id="lastname" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertlastname"
 									style="display: none;">
@@ -87,30 +91,33 @@
 								</div>
 
 								<div class="form-group">
-									<input type="password" class="form-control" data-ng-model="password"
-										placeholder="Password *" name="password" id="password" />
+									<input type="password" class="form-control"
+										data-ng-model="password" placeholder="Password *"
+										name="password" id="password" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertpassword"
 									style="display: none;">
-									<strong>The password must be at least 8 digits long.</strong>
+									<strong>The password must be at least 5 digits long.</strong>
 								</div>
 
 								<div class="form-group">
-									<input type="password" class="form-control" data-ng-model="passwordConfirm"
-										placeholder="Confirm Password *" name="passwordConfirm" id="passwordconfirm" />
+									<input type="password" class="form-control"
+										data-ng-model="passwordConfirm"
+										placeholder="Confirm Password *" name="passwordConfirm"
+										id="passwordconfirm" required />
 								</div>
 								<div class="alert alert-danger" role="alert"
-									id="alertconfirmpassword" style="display: none;">
+									id="alertpasswordconfirm" style="display: none;">
 									<strong>The passwords are not identical.</strong>
 								</div>
 
 								<div class="form-group">
 									<input type="email" class="form-control" data-ng-model="email"
-										placeholder="Your Email *" name="email" id="email" />
+										placeholder="Your Email *" name="email" id="email" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertemail"
 									style="display: none;">
-									<strong>Please enter a valid mail adress.</strong>
+									<strong>Enter a valid mail adress.</strong>
 								</div>
 							</div>
 
@@ -118,21 +125,24 @@
 
 								<div class="form-group">
 									<select class="form-control" data-ng-model="gender" id="gender" name="gender">
-										<option class="hidden" selected disabled>Please
-											select your gender</option>
+										<option selected value="Please select your gender" disabled>Please select your gender</option>
 										<option value="male">male</option>
 										<option value="female">female</option>
 										<option value="others">other</option>
 									</select>
 								</div>
+
+
+
+
 								<div class="alert alert-danger" role="alert" id="alertgender"
 									style="display: none;">
 									<strong>Please select a gender.</strong>
 								</div>
 								<div class="form-group">
-									<select class="form-control" data-ng-model="country" id="country" name="country">
-										<option class="hidden" selected disabled>Please
-											select your country</option>
+									<select class="form-control" data-ng-model="country"
+										id="country" name="country">
+										<option selected disabled>Please select your country</option>
 										<option value="DE">DE</option>
 										<option value="FR">FR</option>
 										<option value="UK">UK</option>
@@ -144,8 +154,8 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" data-ng-model="city" placeholder="City *"
-										name="city" id="city" />
+									<input type="text" class="form-control" data-ng-model="city"
+										placeholder="City *" name="city" id="city" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertcity"
 									style="display: none;">
@@ -153,8 +163,8 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" data-ng-model="zipcode" placeholder="Zipcode *"
-										name="zipcode" id="zipcode" />
+									<input type="text" class="form-control" data-ng-model="zipcode"
+										placeholder="Zipcode *" name="zipcode" id="zipcode" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertzipcode"
 									style="display: none;">
@@ -162,8 +172,8 @@
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" data-ng-model="street" placeholder="Street *"
-										name="street" id="street" />
+									<input type="text" class="form-control" data-ng-model="street"
+										placeholder="Street *" name="street" id="street" required />
 								</div>
 								<div class="alert alert-danger" role="alert" id="alertstreet"
 									style="display: none;">
@@ -172,23 +182,23 @@
 
 								<div class="form-group">
 									<input type="text" class="form-control" data-ng-model="housenr"
-										placeholder="House Number *" name="housenr" id="housenr" />
+										placeholder="House Number *" name="housenr" id="housenumber"
+										required />
 								</div>
 								<div class="alert alert-danger" role="alert"
 									id="alerthousenumber" style="display: none;">
-									<strong>Enter a house number!</strong>
+									<strong>Enter a valid house number!</strong>
 								</div>
 
 
-								<input type="submit" class="btnRegister" value="register"
-									 />
+								<input type="submit" class="btnRegister" value="register" />
 							</div>
 						</div>
 
 					</div>
-					</form>
-				</div>
-			
+				</form>
+			</div>
+
 		</div>
 		<footer class="footer footer-expand-lg fixed-bottom bg-light">
 			<div class="container">
@@ -223,11 +233,12 @@
 		</footer>
 
 	</div>
-	
- 
-	
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="js/registry-validation.js"></script>
