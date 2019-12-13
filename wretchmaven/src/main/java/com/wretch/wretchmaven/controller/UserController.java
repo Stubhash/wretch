@@ -1,5 +1,7 @@
 package com.wretch.wretchmaven.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -76,20 +78,10 @@ public class UserController {
         
     }
     
-    @RequestMapping(method = RequestMethod.GET, value = "/setPartner")
-    private void setScoreboard(User user) {
-        Iterable<User> allUsers = userRepo.findAll();
-        User user2 = allUsers.iterator().next();
-        if(user.getUsername() != user2.getUsername()) {
-        user.setTradingpartner(user2.getUsername());
-        user2.setTradingpartner(user.getUsername());
-    }
-        else {
-        	 user2 = allUsers.iterator().next();
-        	 user.setTradingpartner(user2.getUsername());
-             user2.setTradingpartner(user.getUsername());
-        }
-        
+    @RequestMapping(method = RequestMethod.GET, value = "/getScore")
+    private ResponseEntity getScore() {
+    	
+        return ResponseEntity.ok().body(userRepo.findAll());
     }
     
     private boolean checkUser(User user) {

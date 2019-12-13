@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="setPoints">
+<html lang="en">
 
 <head>
 
@@ -9,8 +9,7 @@
   <meta name="author" content="">
 
   <title>Wretch</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -22,10 +21,10 @@
 
 
   <link href="css/agency.css" rel="stylesheet">
-<script src="js/tradingpage.js"></script>
+
 </head>
 
-<body id="page-top" data-ng-controller="score as s" data-ng-init="getScore()">
+<body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -120,36 +119,20 @@
 
   <section class="bg-dark page-section" id="Scoreboard">
     <div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center text-white">
-					<h2 class="section-heading text-uppercase">Scoreboard</h2>
-					<div class="flex-container">
-						<table 
-							style="border-collapse: separate; border-spacing: 50px 10px;" 
-							>
-							<thead>
-								<tr>
-
-									<th>Nickname</th>
-									<th>Score</th>
-								</tr>
-
-							</thead>
-							<tbody data-ng-repeat="user in s.users">
-								<tr>
-
-									<th>{{ user.username }}</th>
-									<th>{{ user.points }}</th>
-
-								</tr>
-								<tr></tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-		</div>
+      <div class="row">
+        <div class="col-lg-12 text-center text-white">
+          <h2 class="section-heading text-uppercase">Scoreboard</h2>
+          <div class="container">
+         <div class="row">
+           <div class="col">Rank</div>
+           <div class="col">Nickname</div>
+           <div class="col">Score</div>
+         </div>
+        </div>
+        </div>
+      </div>
+      
+    </div>
   </section>
 
 

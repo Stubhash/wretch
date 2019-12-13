@@ -10,6 +10,8 @@
 <meta name="author" content="">
 
 <title>Wretch</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <link
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css	"
@@ -30,13 +32,15 @@
 	rel='stylesheet' type='text/css'>
 
 
-<link href="css/agency.css" rel="stylesheet" th:href="@{/css/main.css}">
+<link href="css/agency.css" rel="stylesheet">
 
 <script src="js/exchanging.js"></script>
+<script src="js/tradingpage.js"></script>
 
 </head>
 
-<body id="page-top" onload="hide_rating_buttons()">
+<body id="page-top" onload="hide_rating_buttons()"
+	data-ng-controller="score as s" data-ng-init="getScore()">
 
 
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -60,8 +64,7 @@
 						href="#team">Team</a></li>
 
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="/logout"
-						>Logout 🎅</a></li>
+						href="/logout">Logout 🎅</a></li>
 				</ul>
 			</div>
 		</div>
@@ -136,24 +139,35 @@
 
 	<section class="bg-secondary page-section" id="exchange">
 
-		<div class="container" data-ng-controller="points">
-			<form data-ng-submit="updatePoints()">
+		<div class="container">
+			<form>
 
 				<div class="row">
 					<div class="col-lg-12 text-center text-white">
 						<h2 class="section-heading text-uppercase">Exchange</h2>
 						<div class="intro-heading text-uppercase" id="address_text">
 						</div>
-						<div class="intro-heading text-uppercase" id="rate_wretcher"> Rate your wretched gift from 1-5!
-						</div>
+						<div class="intro-heading text-uppercase" id="rate_wretcher">
+							Rate your wretched gift from 1-5!</div>
 
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(1)" id="rating_button1" ng-click ="One">🎅</a> 
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(2)" id="rating_button2" data-ng-model ="Two">🎅</a> 
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(3)" id="rating_button3" data-ng-model ="Three">🎅</a>
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(4)" id="rating_button4" data-ng-model ="Four">🎅</a>
-						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger" onclick="click_rating_button(5)" id="rating_button5" data-ng-model ="Five">🎅</a> 
-						<br> <br> 
-						<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"onclick="modify_exchange_button()" id="exchange-button">Exchange now!</a>
+						<a class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
+							onclick="click_rating_button(1)" id="rating_button1"
+							data-ng-model="One">🎅</a> <a
+							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
+							onclick="click_rating_button(2)" id="rating_button2"
+							data-ng-model="Two">🎅</a> <a
+							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
+							onclick="click_rating_button(3)" id="rating_button3"
+							data-ng-model="Three">🎅</a> <a
+							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
+							onclick="click_rating_button(4)" id="rating_button4"
+							data-ng-model="Four">🎅</a> <a
+							class="btn btn-primary btn-s text-uppercase js-scroll-trigger"
+							onclick="click_rating_button(5)" id="rating_button5"
+							data-ng-model="Five">🎅</a> <br> <br> <a
+							class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+							onclick="modify_exchange_button()" id="exchange-button">Exchange
+							now!</a>
 
 					</div>
 				</div>
@@ -168,15 +182,26 @@
 				<div class="col-lg-12 text-center text-white">
 					<h2 class="section-heading text-uppercase">Scoreboard</h2>
 					<div class="flex-container">
-						<table
-							style="border-collapse: separate; border-spacing: 50px 10px;">
+						<table 
+							style="border-collapse: separate; border-spacing: 50px 10px;" 
+							>
 							<thead>
 								<tr>
-									<th>Rank</th>
+
 									<th>Nickname</th>
 									<th>Score</th>
 								</tr>
+
 							</thead>
+							<tbody data-ng-repeat="user in s.users">
+								<tr>
+
+									<th>{{ user.username }}</th>
+									<th>{{ user.points }}</th>
+
+								</tr>
+								<tr></tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
@@ -323,10 +348,8 @@
 	<!-- alt: script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script-->
 	<!-- alt: script src="bootstrap/jquery-easing/jquery.easing.min.js"></script-->
 
-
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script
